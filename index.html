@@ -11,15 +11,22 @@
   <body>
       
     <a-scene fog="type: linear; color: #000000; far: 100; near: 0">
+    <a-entity light="color: #AFA; intensity: 1.5" position="-1 1 0"></a-entity>
+
 
     <a-assets>
-      <video id="video" src="videos/video_background.mp4" autoplay loop webkit-playsinline></video>
+      <!--<video id="video" src="videos/video_background.mp4" autoplay loop webkit-playsinline></video>-->
+      <img id="aconteceunosenac" src="images/img_aconteceunosenac.png ">
        <a-mixin id="light" geometry="primitive: sphere; radius: 0.5"
                  material="color: #FFF; shader: flat"
                  light="color: #DDDDFF; distance: 120; intensity: 10; type: point">
         </a-mixin>
     </a-assets>
-        <a-videosphere src="#video" material="fog: false"></a-videosphere>
+
+      <!--  <a-videosphere src="#video" material="fog: false"></a-videosphere> -->
+       <!--  <a-entity geometry="primitive: plane" material="src: #aconteceunosenac"></a-entity> -->
+
+        <a-image src="#aconteceunosenac" material="transparent : true"> </a-image>
 
 
       <a-sphere position="0 1.25 -1" radius="1.25" color="#EF2D5E"></a-sphere>
@@ -39,15 +46,15 @@
       <a-entity look-at="[camera]" position="5 2 5" bmfont-text=" color: 0xaaffff; text: Suspendisse ex nisl, interdum sit amet nulla quis, sagittis pellentesque ante. Integer egestas, sem ac sollicitudin pellentesque, urna lacus pellentesque arcu, ac convallis erat lectus vel nunc. Etiam vitae semper quam. Curabitur vitae tincidunt mi. Aliquam tortor augue, luctus porta dictum bibendum, scelerisque quis dolor. Quisque egestas urna eros, nec porttitor tortor bibendum at. Cras et volutpat arcu. Nullam at maximus dolor. Sed vel tortor ipsum. Aenean pharetra lacinia dolor in sagittis. Mauris vehicula ipsum quis diam condimentum fermentum. Suspendisse vitae nisi velit.;"></a-entity>
 
 
-      <a-entity position="0 0 0">
+      <!-- <a-entity position="0 0 0">
         <a-animation attribute="rotation" to="0 0 360"
                      repeat="indefinite" easing="linear" dur="4096">
         </a-animation>
         <a-entity mixin="light" position="0 0 0"></a-entity>
-      </a-entity>
+      </a-entity> -->
 
       <a-entity position="0 2.25 -15" particle-system="preset: dust; color: #ffffff; size: 5;"></a-entity>
-     <!--  <a-sky color="#000000"></a-sky> -->
+     <a-sky color="#FFF"></a-sky> 
 
       <a-entity position="0 0 3.8">
         <a-camera near="0.5"></a-camera>
