@@ -1,65 +1,68 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Aconteceu no Senac</title>
-    <meta name="description" content="Aconteceu no Senac">
-    <script src="js/aframe.js"></script>
-    <script src="https://rawgit.com/bryik/aframe-bmfont-text-component/master/dist/aframe-bmfont-text-component.min.js"></script>
-     <script src="https://rawgit.com/IdeaSpaceVR/aframe-particle-system-component/master/dist/aframe-particle-system-component.min.js"></script>
-  </head>
-  <body>
-      
-    <a-scene fog="type: linear; color: #000000; far: 100; near: 0">
-    <a-entity light="color: #AFA; intensity: 1.5" position="-1 1 0"></a-entity>
+
+	<head>
+	    <meta charset="utf-8">
+	    <title>Aconteceu no Senac</title>
+	    <meta name="description" content="Aconteceu no Senac">
+	    <script src="js/aframe.js"></script>
+	    <script src="https://rawgit.com/bryik/aframe-bmfont-text-component/master/dist/aframe-bmfont-text-component.min.js"></script>
+	    <script src="https://rawgit.com/ngokevin/aframe-randomizer-components/master/dist/aframe-randomizer-components.min.js"></script>
+
+  	</head>
+	
+
+	<body>
+    
+	    <a-scene fog="type: linear; color: #000000; far: 100; near: 0">
 
 
-    <a-assets>
-      <!--<video id="video" src="videos/video_background.mp4" autoplay loop webkit-playsinline></video>-->
-      <img id="aconteceunosenac" src="images/img_aconteceunosenac.png ">
-       <a-mixin id="light" geometry="primitive: sphere; radius: 0.5"
-                 material="color: #FFF; shader: flat"
-                 light="color: #DDDDFF; distance: 120; intensity: 10; type: point">
-        </a-mixin>
-    </a-assets>
-
-      <!--  <a-videosphere src="#video" material="fog: false"></a-videosphere> -->
-       <!--  <a-entity geometry="primitive: plane" material="src: #aconteceunosenac"></a-entity> -->
-
-        <a-image src="#aconteceunosenac" material="transparent : true"> </a-image>
+	    <a-assets>
+		    <img id="aconteceunosenac" src="images/img_aconteceunosenac.png">
+				<a-mixin id="light" geometry="primitive: sphere; radius: 0.5"
+		                 material="color: #FFF; shader: flat"
+		                 light="color: #DDDDFF; distance: 120; intensity: 10; type: point">
+		        </a-mixin>
+		</a-assets>
 
 
-      <a-sphere position="0 1.25 -1" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-box position="-1 0.5 1" rotation="0 45 0" width="1" height="1" depth="1"  color="#4CC3D9"></a-box>
-      <a-cylinder position="1 0.75 1" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-entity look-at="[camera]" position="10 2 5" bmfont-text=" color: 0xaaffff; text: Pellentesque tempus ac augue cursus finibus. Phasellus orci mi, finibus in gravida at, consequat ac leo. Proin scelerisque fermentum nibh vel tempus. Maecenas dignissim magna aliquam dolor aliquam, nec sagittis mauris sodales. Pellentesque eu viverra justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In efficitur at ex nec fermentum. Nullam maximus mollis turpis vel ornare. Vestibulum rutrum faucibus massa, sit amet efficitur justo dignissim nec. Nam cursus viverra arcu vitae tempor. Donec tincidunt sapien ut nunc rutrum rutrum.;"></a-entity>
+	   	<a-image src="#aconteceunosenac" position="0 1.5 0" width="2"></a-image>
+	    
+	    <a-entity look-at="[camera]" random-spherical-position bmfont-text=" color: 0xaaffff; text: Cras eget libero elementum, laoreet lectus et, fringilla nisi. Maecenas vitae vehicula mauris. Vestibulum viverra nunc et sollicitudin ultrices. Aliquam posuere sodales sodales. Morbi malesuada posuere ante nec laoreet.;"></a-entity>
+
+   		<a-entity look-at="[camera]" random-position bmfont-text=" color: 0xaaffff; text: Donec tincidunt sapien ut nunc rutrum rutrum.;"></a-entity>
+   		<a-entity look-at="[camera]" random-position bmfont-text=" color: 0xaaffff; text: Maecenas dignissim magna aliquam dolor aliquam, nec sagittis mauris sodales. Pellentesque eu viverra justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In efficitur at ex nec fermentum.;"></a-entity>
+
+	    <a-entity look-at="[camera]" random-position bmfont-text=" color: 0xaaffff; text: Pellentesque tempus ac augue cursus finibus. Phasellus orci mi, finibus in gravida at, consequat ac leo. Proin scelerisque fermentum nibh vel tempus. Maecenas dignissim magna aliquam dolor aliquam, nec sagittis mauris sodales. Pellentesque eu viverra justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In efficitur at ex nec fermentum. Nullam maximus mollis turpis vel ornare. Vestibulum rutrum faucibus massa, sit amet efficitur justo dignissim nec. Nam cursus viverra arcu vitae tempor. Donec tincidunt sapien ut nunc rutrum rutrum.;"></a-entity>
 
 
-      <a-entity look-at="[camera]" position="1 2 10" bmfont-text=" color: 0xaaffff; text: Suspendisse egestas lorem ac placerat aliquam. Ut sed nibh erat. Ut auctor, sapien ac viverra egestas, risus justo pulvinar felis, vel dignissim ligula tellus id nisl.;"></a-entity>
+	    <a-entity look-at="[camera]" random-position bmfont-text=" color: 0xaaffff; text: Suspendisse egestas lorem ac placerat aliquam. Ut sed nibh erat. Ut auctor, sapien ac viverra egestas, risus justo pulvinar felis, vel dignissim ligula tellus id nisl.;"></a-entity>
 
 
 
-      <a-entity look-at="[camera]" position="5 2 5" bmfont-text=" color: 0xaaffff; text: Cras eget libero elementum, laoreet lectus et, fringilla nisi. Maecenas vitae vehicula mauris. Vestibulum viverra nunc et sollicitudin ultrices. Aliquam posuere sodales sodales. Morbi malesuada posuere ante nec laoreet.;"></a-entity>
+	    <a-entity look-at="[camera]" random-position bmfont-text=" color: 0xaaffff; text: Cras eget libero elementum, laoreet lectus et, fringilla nisi. Maecenas vitae vehicula mauris. Vestibulum viverra nunc et sollicitudin ultrices. Aliquam posuere sodales sodales. Morbi malesuada posuere ante nec laoreet.;"></a-entity>
 
 
-      <a-entity look-at="[camera]" position="5 2 5" bmfont-text=" color: 0xaaffff; text: Suspendisse ex nisl, interdum sit amet nulla quis, sagittis pellentesque ante. Integer egestas, sem ac sollicitudin pellentesque, urna lacus pellentesque arcu, ac convallis erat lectus vel nunc. Etiam vitae semper quam. Curabitur vitae tincidunt mi. Aliquam tortor augue, luctus porta dictum bibendum, scelerisque quis dolor. Quisque egestas urna eros, nec porttitor tortor bibendum at. Cras et volutpat arcu. Nullam at maximus dolor. Sed vel tortor ipsum. Aenean pharetra lacinia dolor in sagittis. Mauris vehicula ipsum quis diam condimentum fermentum. Suspendisse vitae nisi velit.;"></a-entity>
+	    <a-entity look-at="[camera]" random-position bmfont-text=" color: 0xaaffff; text: Suspendisse ex nisl, interdum sit amet nulla quis, sagittis pellentesque ante. Integer egestas, sem ac sollicitudin pellentesque, urna lacus pellentesque arcu, ac convallis erat lectus vel nunc. Etiam vitae semper quam. Curabitur vitae tincidunt mi. Aliquam tortor augue, luctus porta dictum bibendum, scelerisque quis dolor. Quisque egestas urna eros, nec porttitor tortor bibendum at. Cras et volutpat arcu. Nullam at maximus dolor. Sed vel tortor ipsum. Aenean pharetra lacinia dolor in sagittis. Mauris vehicula ipsum quis diam condimentum fermentum. Suspendisse vitae nisi velit.;"></a-entity>
+
+	    <a-entity look-at="[camera]" random-position bmfont-text=" color: 0xaaffff; text: Suspendisse ex nisl, interdum sit amet nulla quis, sagittis pellentesque ante. Integer egestas, sem ac sollicitudin pellentesque, urna lacus pellentesque arcu, ac convallis erat lectus vel nunc. Etiam vitae semper quam. Curabitur vitae tincidunt mi. Aliquam tortor augue, luctus porta dictum bibendum, scelerisque quis dolor. Quisque egestas urna eros, nec porttitor tortor bibendum at. Cras et volutpat arcu. Nullam at maximus dolor. Sed vel tortor ipsum. Aenean pharetra lacinia dolor in sagittis. Mauris vehicula ipsum quis diam condimentum fermentum. Suspendisse vitae nisi velit.;"></a-entity>
+
+	    <a-entity look-at="[camera]" random-position bmfont-text=" color: 0xaaffff; text: Suspendisse ex nisl, interdum sit amet nulla quis, sagittis pellentesque ante. Integer egestas, sem ac sollicitudin pellentesque, urna lacus pellentesque arcu, ac convallis erat lectus vel nunc. Etiam vitae semper quam. Curabitur vitae tincidunt mi. Aliquam tortor augue, luctus porta dictum bibendum, scelerisque quis dolor. Quisque egestas urna eros, nec porttitor tortor bibendum at. Cras et volutpat arcu. Nullam at maximus dolor. Sed vel tortor ipsum. Aenean pharetra lacinia dolor in sagittis. Mauris vehicula ipsum quis diam condimentum fermentum. Suspendisse vitae nisi velit.;"></a-entity>
+
+	    <a-entity look-at="[camera]" random-position bmfont-text=" color: 0xaaffff; text: Suspendisse ex nisl, interdum sit amet nulla quis, sagittis pellentesque ante. Integer egestas, sem ac sollicitudin pellentesque, urna lacus pellentesque arcu, ac convallis erat lectus vel nunc. Etiam vitae semper quam. Curabitur vitae tincidunt mi. Aliquam tortor augue, luctus porta dictum bibendum, scelerisque quis dolor. Quisque egestas urna eros, nec porttitor tortor bibendum at. Cras et volutpat arcu. Nullam at maximus dolor. Sed vel tortor ipsum. Aenean pharetra lacinia dolor in sagittis. Mauris vehicula ipsum quis diam condimentum fermentum. Suspendisse vitae nisi velit.;"></a-entity>
+
+	    <a-entity look-at="[camera]" random-position bmfont-text=" color: 0xaaffff; text: Suspendisse ex nisl, interdum sit amet nulla quis, sagittis pellentesque ante. Integer egestas, sem ac sollicitudin pellentesque, urna lacus pellentesque arcu, ac convallis erat lectus vel nunc. Etiam vitae semper quam. Curabitur vitae tincidunt mi. Aliquam tortor augue, luctus porta dictum bibendum, scelerisque quis dolor. Quisque egestas urna eros, nec porttitor tortor bibendum at. Cras et volutpat arcu. Nullam at maximus dolor. Sed vel tortor ipsum. Aenean pharetra lacinia dolor in sagittis. Mauris vehicula ipsum quis diam condimentum fermentum. Suspendisse vitae nisi velit.;"></a-entity>
+
+	    <a-entity look-at="[camera]" random-position bmfont-text=" color: 0xaaffff; text: Suspendisse ex nisl, interdum sit amet nulla quis, sagittis pellentesque ante. Integer egestas, sem ac sollicitudin pellentesque, urna lacus pellentesque arcu, ac convallis erat lectus vel nunc. Etiam vitae semper quam. Curabitur vitae tincidunt mi. Aliquam tortor augue, luctus porta dictum bibendum, scelerisque quis dolor. Quisque egestas urna eros, nec porttitor tortor bibendum at. Cras et volutpat arcu. Nullam at maximus dolor. Sed vel tortor ipsum. Aenean pharetra lacinia dolor in sagittis. Mauris vehicula ipsum quis diam condimentum fermentum. Suspendisse vitae nisi velit.;"></a-entity>
 
 
-      <!-- <a-entity position="0 0 0">
-        <a-animation attribute="rotation" to="0 0 360"
-                     repeat="indefinite" easing="linear" dur="4096">
-        </a-animation>
-        <a-entity mixin="light" position="0 0 0"></a-entity>
-      </a-entity> -->
 
-      <a-entity position="0 2.25 -15" particle-system="preset: dust; color: #ffffff; size: 5;"></a-entity>
-     <a-sky color="#FFF"></a-sky> 
+		    <a-sky color="#FFF"></a-sky> 
 
-      <a-entity position="0 0 3.8">
-        <a-camera near="0.5"></a-camera>
-      </a-entity>
-    </a-scene>
+		    <a-entity position="0 0 3.8">
+		    	<a-camera near="0.5"></a-camera>
+			</a-entity>
+		</a-scene>
 
-  </body>
+	</body>
 </html>
